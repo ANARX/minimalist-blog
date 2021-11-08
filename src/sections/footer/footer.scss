@@ -1,0 +1,72 @@
+@import "../../theme/palette";
+@import "../../theme/typography";
+
+.footer-section {
+  background-color: $black;
+  padding: 50px;
+  text-align: center;
+}
+
+.footer-header {
+  @include text_header(true, true);
+  color: $white;
+}
+
+.footer-text {
+  @include text_regular;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.sb-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@mixin social-button($color) {
+  margin: 3px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid $color;
+  transition: border 0.5s ease;
+  display: flex;
+  justify-content: center;
+  i {
+    color: $color;
+    transition: color 0.5s ease;
+    font-size: 12px;
+    align-self: center;
+  }
+  &:hover {
+    i {
+      color: lighten($color, 15%);
+      transition: color 0.5s ease;
+    }
+
+    border: 2px solid lighten($color, 15%);
+    transition: border 0.5s ease;
+  }
+}
+
+.social-rss {
+  @include social-button($RSS);
+}
+
+.social-facebook {
+  @include social-button($facebook);
+}
+
+.social-twitter {
+  @include social-button($twitter);
+}
+
+.social-dribbble {
+  @include social-button($dribbble);
+}
+
+.social-pinterest {
+  @include social-button($pinterest);
+}

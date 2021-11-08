@@ -1,0 +1,73 @@
+@import "../../theme/palette";
+@import "../../theme/screen-size";
+@import "../../theme/typography";
+
+.post-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-image {
+  width: 80%;
+  display: block;
+  margin: 0 auto 10px;
+
+  @media #{$size_m} {
+    display: inline-block;
+    width: initial;
+    margin: 0 20px 10px 0;
+    vertical-align: top;
+  }
+}
+
+.post-info {
+  text-align: center;
+
+  @media #{$size_m} {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.post-title {
+  @include text_subheader;
+}
+
+.post-meta {
+  display: block;
+}
+
+.post-category-box {
+  display: inline-block;
+}
+
+.post-category {
+  @include text_regular;
+}
+
+.post-category::after {
+  content: ", "
+}
+
+.post-category:last-of-type::after {
+  content: "";
+}
+
+.post-comments {
+  @include text_regular;
+}
+
+.post-comments::before {
+  content: "/";
+  margin: 0 10px;
+}
+
+.post-description {
+  @include text_regular($headerText);
+  display: none;
+
+  @media #{$size_m} {
+    display: block;
+  }
+}

@@ -1,0 +1,98 @@
+@import "../../theme/screen-size";
+@import "../../theme/typography";
+@import "../../theme/palette";
+
+.hamburger-menu-container {
+  display: grid;
+  justify-content: right;
+  box-sizing: border-box;
+  padding: 20px;
+
+  @media #{$size_m} {
+    display: none;
+  }
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  fill: $white;
+  display: flex;
+}
+
+.hamburger-button {
+  width: 20px;
+  height: 20px;
+}
+
+.hamburger-cross {
+  width: 25px;
+  height: 25px;
+}
+
+.navbar-closed {
+  transform: translateX(320px);
+
+  @media #{$size_m} {
+    transform: none;
+  }
+}
+
+.navbar {
+  position: absolute;
+  top: 75px;
+  width: 320px;
+  border: 1px solid $gray;
+  background-color: $white;
+  transition: all .2s;
+  z-index: 1;
+
+  @media #{$size_m} {
+    position: initial;
+    top: initial;
+    border: none;
+    width: auto;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+.navbar-link {
+  @include text_regular;
+  display: block;
+  list-style: none;
+  padding: 15px 25px;
+  border-bottom: 1px solid $gray;
+  text-transform: uppercase;
+  background:
+          linear-gradient(to bottom right, $black 50%, $white 50.1%) left/300% 300% no-repeat,
+          linear-gradient(to bottom right, transparent 50%, #B9DEE9 50.1%) left/300% 300% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  transition: 0.8s;
+  &:hover {
+    background-color: $gray;
+    background-position: center;
+  }
+
+  &:last-of-type {
+    box-shadow: 0 1px 2px 0 $darkGray;
+  }
+
+  @media #{$size_m} {
+    padding: 10px 15px;
+    display: inline-block;
+    border: none;
+
+    &:last-of-type {
+      box-shadow: none;
+    }
+  }
+
+  @media #{$size_l} {
+    transform: none;
+    padding: 10px 25px;
+  }
+}

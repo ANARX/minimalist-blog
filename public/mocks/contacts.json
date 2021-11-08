@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1000,
+      "title": "20 W 34th St, New York, NY 10001, US",
+      "link": "https://goo.gl/maps/XoVRwfrtNES6teddA"
+    },
+    {
+      "id": 1001,
+      "title": "T. +1 (212)-736-3100",
+      "link": "tel:+12127363100"
+    },
+    {
+      "id": 1002,
+      "title": "contact@esbnyc.com",
+      "link": "mailto:contact@esbnyc.com"
+    }
+  ]
+}

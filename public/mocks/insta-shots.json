@@ -1,0 +1,20 @@
+{
+  "data" : [
+    {
+      "media" : "img/insta-shots/instagram-shot-1.jpg",
+      "desc": "Сroissan"
+    },
+    {
+      "media" : "img/insta-shots/instagram-shot-2.jpg",
+      "desc": "Project"
+    },
+    {
+      "media" : "img/insta-shots/instagram-shot-3.jpg",
+      "desc" : "Puppy"
+    },
+    {
+      "media" : "img/insta-shots/instagram-shot-4.jpg",
+      "desc" : "Tablet"
+    }
+  ]
+}

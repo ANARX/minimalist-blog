@@ -1,0 +1,55 @@
+@import "../../theme/palette";
+@import "../../theme/screen-size";
+@import "../../theme/typography";
+
+.recent-posts-section {
+  padding: 25px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "post-1"
+    "post-2"
+    "post-3"
+    "post-4";
+
+  @media #{$size_l} {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "post-1 post-2"
+    "post-3 post-4";
+  }
+}
+
+.recent-post-item:hover {
+  transform: scale(1.05);
+  transition: .3s linear
+}
+
+.posts-header {
+  @include text_header(true, true);
+  text-align: center;
+
+  @media #{$size_m} {
+    text-align: left;
+
+    @include text_header(true, false);
+
+  }
+}
+
+@for $i from 1 to 5 {
+  .post-#{$i} {
+    grid-area: post-#{$i};
+
+    @if ($i == 4) {
+      display: none !important;
+
+      @media #{$size_m} {
+        display: block;
+      }
+    }
+  }
+}

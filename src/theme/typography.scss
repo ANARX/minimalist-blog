@@ -1,0 +1,47 @@
+@import "palette";
+
+@mixin text_header($leftDash: false, $rightDash: false) {
+  grid-area: header;
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: $headerText;
+
+  &::before  {
+    content: "-";
+    margin-right: 5px;
+    display: none;
+  }
+
+  &::after  {
+    content: "-";
+    margin-left: 5px;
+    display: none;
+  }
+
+  @if ($leftDash == true) {
+    &::before  {
+      display: initial;
+    }
+  }
+
+  @if ($rightDash == true) {
+    &::after  {
+      display: initial;
+    }
+  }
+}
+
+@mixin text_subheader {
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: $headerText;
+}
+
+@mixin text_regular($color: $regularText) {
+  font-size: 11px;
+  color: $color;
+}

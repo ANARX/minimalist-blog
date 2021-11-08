@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "id": 1000,
+      "value": "home",
+      "link": "/home",
+      "enabled": true
+    },
+    {
+      "id": 1001,
+      "value": "about us",
+      "link": "/about-us",
+      "enabled": true
+    },
+    {
+      "id": 1002,
+      "value": "our journal",
+      "link": "/our-journal",
+      "enabled": true
+    },
+    {
+      "id": 1003,
+      "value": "projects",
+      "link": "/projects",
+      "enabled": true
+    },
+    {
+      "id": 1004,
+      "value": "news",
+      "link": "/news",
+      "enabled": true
+    },
+    {
+      "id": 1005,
+      "value": "features",
+      "link": "/features",
+      "enabled": true
+    },
+    {
+      "id": 1006,
+      "value": "contact",
+      "link": "/contact",
+      "enabled": true
+    }
+  ]
+}
+

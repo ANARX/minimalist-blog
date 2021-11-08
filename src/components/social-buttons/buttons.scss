@@ -1,0 +1,63 @@
+@import "../../theme/palette";
+
+.sm-buttons {
+  margin: 3px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: border 0.5s ease;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    transition: border 0.5s ease;
+  }
+
+  svg {
+    width: 55%;
+    height: auto;
+
+    &:hover {
+      transition: color 0.5s ease;
+    }
+  }
+}
+
+@mixin sb-colorize($color) {
+  border: 2px solid $color;
+  transition: color 0.5s ease;
+
+  &:hover {
+    border: 2px solid lighten($color, 15%);
+  }
+
+  &:hover svg {
+    fill: lighten($color, 15%);
+    transition: color 0.5s ease;
+  }
+
+  svg {
+    fill: $color;
+    transition: color 0.5s ease;
+  }
+}
+
+.sb-dribbble-style {
+  @include sb-colorize($dribbble);
+}
+
+.sb-facebook-style {
+  @include sb-colorize($facebook);
+}
+
+.sb-twitter-style {
+  @include sb-colorize($twitter);
+}
+
+.sb-pinterest-style {
+  @include sb-colorize($pinterest);
+}
+
+.sb-rss-style {
+  @include sb-colorize($RSS);
+}
